@@ -1,0 +1,288 @@
+<html>
+
+<style>
+    .regular-section{
+        padding: 40px 0 40px 0;
+    }
+    .regular-section-alt{
+        padding: 40px 0 40px 0;
+        background-color:rgba(219,162,187,.25);
+    }
+    .regular-section .icon{
+        width: 110px;
+    }
+    .regular-section-alt .icon{
+        width: 110px;
+    }
+    .section{
+/*         top: 50%; */
+/*         -ms-transform: translateY(-50%); */
+/*         transform: translateY(-50%); */
+        min-height: 100vh;
+        padding: 40px 0 40px 0 ;
+/*         overflow: hidden; */
+    }
+    .section-content{
+         margin: 0;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+         min-width:100%;
+
+       }
+    .button-container{
+            padding: 40px 0 40px 0 ;
+    }
+
+    .button{
+        text-transform: uppercase;
+        font-family: Monserrat, sans-serif;
+        text-decoration: none;
+        leter-spacing: 3px;
+        font-size: 17px;
+        color: white;
+        background-color: rgb(235, 98, 239);
+        border-radius: 20px;
+        padding: 10px 40px;
+        border: 1px solid rgb(235, 98, 239);
+        margin: 30px 30px;
+    }
+    .button:hover{
+        background-color: white;
+        color: rgb(235, 98, 239);
+    }
+    body {
+        /*background-color: #38a4ef;*/
+        background-image: url('images/bg.jpeg');
+        color:#fff;
+        font-size:16px;
+        text-align:center;
+        /*font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;*/
+        font-family: sans-serif;
+    }
+    H1{
+        text-transform: uppercase;
+        font-family: Monserrat, sans-serif;
+        font-size: 25px;
+        font-weight: 400;
+        leter-spacing: 3px;
+    }
+    p{
+        font-family: Monserrat, sans-serif;
+        font-size: 17px
+
+    }
+
+    .clock {
+        display:block;
+        margin: 0 auto;
+
+        @media only screen and (max-width: 900px)  {
+            max-width:100%;
+        };
+        @media only screen and (min-width: 900px)  {
+            max-width:80%;
+        }
+    .clock-item {
+        /*background-color:rgba(255,255,255,.25);*/
+        background-color:rgba(219,162,187,.25);
+        color:#fff;
+        display:inline-block;
+    @media only screen and (max-width: 900px)  {
+        font-size:1.3rem;
+        padding:0.3rem;
+        margin: 0 0.25rem;
+        width: calc(20% - 2rem);
+        /*width: calc(10% - 2rem);*/
+    };
+    @media only screen and (min-width: 900px)  {
+        font-size:2.5rem;
+        padding:2rem;
+        margin: 0 1rem;
+        width: calc(10% - 2rem);
+    }
+
+
+    text-align:center;
+    font-weight:bold;
+    border-radius:5%;
+    @media only screen and (min-width: 900px) {
+    &[data-value*="days"]:after,
+    &[data-value*="hours"]:after,
+    &[data-value*="minutes"]:after,
+    &[data-value*="seconds"]:after {
+         display: block;
+         font-size: .75rem;
+         margin-top: .25rem;
+         font-weight: 300;
+     }
+    }
+    @media only screen and (max-width: 900px) {
+    &[data-value*="days"]:after,
+    &[data-value*="hours"]:after,
+    &[data-value*="minutes"]:after,
+    &[data-value*="seconds"]:after {
+         display: block;
+         font-size: .45rem;
+         margin-top: .1rem;
+         font-weight: 300;
+     }
+    }
+
+    &[data-value*="days"]:after {
+         content:"DIAS"
+     }
+    &[data-value*="hours"]:after {
+         content:"HORAS"
+     }
+    &[data-value*="minutes"]:after {
+         content:"MINUTOS"
+     }
+    &[data-value*="seconds"]:after {
+         content:"SEGUNDOS"
+     }
+    }
+
+</style>
+
+<section class="section">
+<div class="section-content">
+<img src="./images/M.png" />
+
+<!--<h2>Countdown Clock 1</h2>-->
+<div class="clock" id="clock1">
+    <div class="clock-item" data-value="days"></div>
+    <div class="clock-item" data-value="hours"></div>
+    <div class="clock-item" data-value="minutes"></div>
+    <div class="clock-item" data-value="seconds"></div>
+</div>
+</div>
+</section>
+<section class="regular-section">
+<img class="icon" src="./images/fiesta.png" />
+<H1>FIESTA</H1>
+<p>
+Sábado 13 de abril
+</p><p>en Palacio San Miguel, Salón Pueyrredón, Suipacha 84, Capital Federal.
+</p><p>
+¡Te espero a las 21:30 hs para festejar juntos!
+</p>
+<div class="button-container">
+<a class="button" href="comollegar.html">Como llegar?</a>
+</div>
+</section>
+<section class="regular-section-alt">
+<img class="icon" src="./images/dresscode.png" />
+<H1>Dress Code</H1>
+<p>Elegante. No Pink No silver</p>
+</section>
+<section class="regular-section">
+<H1>rsvp</H1>
+<p>Espero que puedas acompañarme</p>
+<p>¡Confirmá tu asistencia!</p>
+<div class="button-container">
+<a class="button" href="confirmar.html">Confirmar asistencia</a>
+</div>
+</section>
+
+<section class="regular-section-alt">
+<img class="icon" src="./images/musica.png" />
+<H1>musica</H1>
+<p>
+¡Ayudame sugiriendo las canciones que pensás que no pueden faltar en la fiesta!
+</p>
+<div class="button-container">
+<a class="button" href="sugerircancion.html">sugerir cancion</a></div>
+</section>
+<section class="regular-section">
+<img class="icon" src="./images/instagram.png" />
+<H1><a style="color:white" href="https://www.instagram.com/sweet_miuchi">@sweet_miuchi</a></H1>
+<p>
+¡Preparate para esta gran fiesta!
+</p><p>
+Seguime en mi cuenta de Instagram y etiquetame en tus fotos y videos.
+</p>
+<div class="button-container">
+<a class="button" href="https://www.instagram.com/sweet_miuchi">ver instagram</a></div>
+</section>
+<script>
+    // class to create a countdown timer
+    class CountdownTimer {
+        // setup timer values
+        constructor({ selector, targetDate, backgroundColor = null, foregroundColor = null }) {
+            this.selector = selector;
+            this.targetDate = targetDate;
+            this.backgroundColor = backgroundColor;
+            this.foregroundColor = foregroundColor;
+
+            // grab divs on frontend using supplied selector ID
+            this.refs = {
+                days: document.querySelector(`${this.selector} [data-value="days"]`),
+                hours: document.querySelector(`${this.selector} [data-value="hours"]`),
+                mins: document.querySelector(`${this.selector} [data-value="minutes"]`),
+                secs: document.querySelector(`${this.selector} [data-value="seconds"]`),
+            };
+        }
+
+        getTimeRemaining(endtime) {
+            const total = Date.parse(endtime) - Date.parse(new Date());
+            const days = Math.floor(total / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+            const mins = Math.floor((total / 1000 / 60) % 60);
+            const secs = Math.floor((total / 1000) % 60);
+            return {
+                total,
+                days,
+                hours,
+                mins,
+                secs,
+            };
+        }
+
+        updateTimer({ days, hours, mins, secs }) {
+            this.refs.days.textContent = days;
+            this.refs.hours.textContent = hours;
+            this.refs.mins.textContent = mins;
+            this.refs.secs.textContent = secs;
+        }
+
+        updateColors() {
+            if (this.backgroundColor != null) {
+                this.refs.days.style.background = this.backgroundColor;
+                this.refs.hours.style.background = this.backgroundColor;
+                this.refs.mins.style.background = this.backgroundColor;
+                this.refs.secs.style.background = this.backgroundColor;
+            }
+
+            if (this.foregroundColor != null) {
+                this.refs.days.style.color = this.foregroundColor;
+                this.refs.hours.style.color = this.foregroundColor;
+                this.refs.mins.style.color = this.foregroundColor;
+                this.refs.secs.style.color = this.foregroundColor;
+            }
+        }
+
+        startTimer() {
+            const timer = this.getTimeRemaining(this.targetDate);
+            this.updateTimer(timer);
+            this.updateColors();
+            setInterval(() => {
+                const timer = this.getTimeRemaining(this.targetDate);
+                this.updateTimer(timer);
+            }, 1000);
+        }
+    }
+    // setup timer with set textual date in the future
+    const timer1 = new CountdownTimer({
+        selector: "#clock1",
+        targetDate: new Date("April, 13 2024 21:00:00"),
+    });
+
+    timer1.startTimer();
+
+</script>
+
+
+</html>
