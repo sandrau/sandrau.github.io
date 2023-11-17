@@ -1,0 +1,130 @@
+.iframe{
+    width:640px;
+    height:100%;
+}
+.map{
+    width:700px;
+    height:450px;
+}
+
+.loading-section{
+    background:url(images/loading.gif) center center no-repeat;
+}
+.regular-section{
+    padding: 40px 0 40px 0;
+}
+.regular-section-alt{
+    padding: 40px 0 40px 0;
+    background-color:rgba(219,162,187,.25);
+}
+
+.regular-section .icon{
+    width: 110px;
+}
+.regular-section-alt .icon{
+    width: 110px;
+}
+.section{
+    /*         top: 50%; */
+    /*         -ms-transform: translateY(-50%); */
+    /*         transform: translateY(-50%); */
+    min-height: 100vh;
+    padding: 40px 0 40px 0 ;
+    /*         overflow: hidden; */
+}
+.section-content{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    min-width:100%;
+
+}
+.button-container{
+    padding: 40px 0 40px 0 ;
+}
+
+.button{
+    text-transform: uppercase;
+    font-family: Monserrat, sans-serif;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 17px;
+    color: white;
+    background-color: rgb(235, 98, 239);
+    border-radius: 20px;
+    padding: 10px 40px;
+    border: 1px solid rgb(235, 98, 239);
+    margin: 30px 30px;
+}
+.button:hover{
+    background-color: white;
+    color: rgb(235, 98, 239);
+}
+body {
+    /*background-color: #38a4ef;*/
+    background-image: url('images/bg.jpeg');
+    color:#fff;
+    font-size:16px;
+    text-align:center;
+    /*font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;*/
+    font-family: sans-serif;
+}
+H1{
+    text-transform: uppercase;
+    font-family: Monserrat, sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+p{
+    font-family: Monserrat, sans-serif;
+    font-size: 17px
+}
+
+/*todo check behaviour*/
+.clock {
+    display: block;
+    margin: 0 auto;
+    max-width:  100%;
+
+}
+.clock-item {
+    background-color: rgba(219, 162, 187, .25);
+    color: #fff;
+    display: inline-block;
+    text-align:center;
+    font-weight:bold;
+    border-radius:5%;
+}
+@media only screen and (max-width: 900px) {
+    .clock{
+        /*max-width:  100%;*/
+        font-size: .45rem;
+        margin-top: .1rem;
+    }
+    .clock-item{
+        font-size:1.3rem;
+        padding:0.3rem;
+        margin: 0 0.25rem;
+        width: calc(20% - 2rem);
+    }
+}
+@media only screen and (min-width: 900px)  {
+    .clock{
+        /*max-width:80%;*/
+        font-size: .75rem;
+        margin-top: .25rem;
+    }
+    .clock-item {
+        font-size: 2.5rem;
+        padding: 2rem;
+        margin: 0 1rem;
+        width: calc(10% - 2rem);
+    }
+}
+
+
+
