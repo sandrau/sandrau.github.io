@@ -1,11 +1,14 @@
 <html>
 <head>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
 </head>
+<body>
 <section class="section">
     <div class="section-content">
         <img src="./images/M.png" />
         <!--<h2>Countdown Clock 1</h2>-->
+        <p id="typed-text" ></p>
         <div class="clock" id="clock1">
             <div class="clock-item"><div  data-value="days"></div><div class="clock-details">dias</div></div>
             <div class="clock-item"><div data-value="hours"></div><div class="clock-details">hs</div></div>
@@ -17,7 +20,7 @@
 <section class="regular-section">
     <img class="icon" src="./images/fiesta.png" />
     <H1>Fiesta</H1>
-    <p>Sábado 13 de abril</p>
+    <p>Sábado 13 de Abril</p>
     <p>Palacio San Miguel, Salón Pueyrredón, Suipacha 84, Capital Federal.</p>
     <p>¡Te espero a las 21:30 hs para festejar juntos!</p>
     <div class="button-container">
@@ -55,6 +58,15 @@
     <div class="button-container">
         <a class="button" href="https://www.instagram.com/sweet_miuchi">ver instagram</a></div>
 </section>
-
+</body>
 <script type="text/javascript" src="clock.js"></script>
+<script>
+      var typed = new Typed('#typed-text', {
+         strings: ["Sábado 13 de Abril, Palacio San Miguel, faltan solo..."],
+         typeSpeed: 60,
+         backSpeed: 100,
+         loop: false
+     });
+   </script>
+
 </html>
