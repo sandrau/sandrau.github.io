@@ -2,6 +2,15 @@
     width:640px;
     height:100%;
 }
+
+.sugerir-cancion{
+    width:640px;
+    height:90%;
+}
+.canciones{
+    width:60%;
+    height:75%;
+}
 .map{
     width:700px;
     height:450px;
@@ -87,7 +96,8 @@ H1{
 p{
     /*font-family: Monserrat, sans-serif;*/
     font-size: 17px;
-    font-family: "Courier New",sans-serif;
+    /*font-family: "Courier New",sans-serif;*/
+    font-family: "Courier New",monospace;
 }
 
 /*todo check behaviour*/
@@ -174,7 +184,8 @@ p{
         font-size: 60px;
     }
     p{
-        font-size: 45px
+        font-size: 40px;
+        font-weight: 400;
     }
 }
 
