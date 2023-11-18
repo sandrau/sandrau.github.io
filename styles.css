@@ -49,7 +49,7 @@
 
 .button{
     text-transform: uppercase;
-    font-family: Monserrat, sans-serif;
+    /*font-family: Monserrat, sans-serif;*/
     text-decoration: none;
     letter-spacing: 3px;
     font-size: 17px;
@@ -68,21 +68,26 @@ body {
     /*background-color: #38a4ef;*/
     background-image: url('images/bg.jpeg');
     color:#fff;
-    font-size:16px;
+    font-size:6px;
     text-align:center;
     /*font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;*/
-    font-family: sans-serif;
+    /*font-family: "Trebuchet MS",sans-serif;*/
+    font-family: "Tahoma",sans-serif;
+    /*font-family: "Lucida Grande",sans-serif;*/
+    /*font-family: "Courier New",sans-serif;*/
+/*    Times , Verdana, Helvetica ,Georgia*/
 }
 H1{
     text-transform: uppercase;
-    font-family: Monserrat, sans-serif;
+    /*font-family: Monserrat, sans-serif;*/
     font-size: 25px;
     font-weight: 400;
     letter-spacing: 3px;
 }
 p{
-    font-family: Monserrat, sans-serif;
-    font-size: 17px
+    /*font-family: Monserrat, sans-serif;*/
+    font-size: 17px;
+    font-family: "Courier New",sans-serif;
 }
 
 /*todo check behaviour*/
