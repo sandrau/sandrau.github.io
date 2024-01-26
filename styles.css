@@ -4,7 +4,7 @@
 }
 
 .sugerir-cancion{
-    width:40px;
+    width:490px;
     height:90%;
 }
 .canciones{
@@ -27,7 +27,12 @@
     /*background-color:rgba(219,162,187,.25);*/
     background-color:rgba(256,256,256,.25);
 }
-
+.save-regular-section .small-icon{
+    width: 110px;
+}
+.save-regular-section{
+    padding: 00px 0 80px 0;
+}
 .regular-section .icon{
     width: 110px;
 }
@@ -101,6 +106,36 @@ p{
 }
 
 /*todo check behaviour*/
+.small-clock {
+    display: block;
+    margin: 0 auto;
+    max-width:  50%;
+    width: 50%;
+    /*height: 100px;*/
+    /*background-color: #000;*/
+    font-size: .75rem;
+    margin-top: .25rem;
+
+}
+.small-clock-item {
+    font-family: Monserrat, sans-serif;
+    background-color: rgba(219, 162, 187, .25);
+    color: #fff;
+    display: inline-block;
+    text-align:center;
+    font-weight:bold;
+    border-radius:5%;
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0 1rem;
+    width: calc(10% - 2rem);
+}
+.small-clock-details{
+    /*font-family: Monserrat, sans-serif;*/
+    text-transform: uppercase;
+    font-weight:lighter;
+    font-size: 1rem;
+}
 .clock {
     display: block;
     margin: 0 auto;
