@@ -228,6 +228,25 @@ p{
     .clock-details{
         font-size: 2rem;
     }
+    .small-clock {
+        font-size: .75rem;
+        margin-top: .25rem;
+        max-width: 100%;
+        width: 100%;
+    }
+    .small-clock-item {
+        font-size: 2rem;
+        padding: 2rem;
+        margin: 0 1rem;
+        width: calc(10% - 2rem);
+        /*max-width:  100%;*/
+        /*width: 50%;*/
+
+    }
+    .small-clock-details{
+        font-size: 1.5rem;
+        /*font-size: 1rem;*/
+    }
     H1{
         font-size: 60px;
     }
