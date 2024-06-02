@@ -25,6 +25,7 @@ function searchProduct(idProducto, idDiv) {
     var listado = doRequest(params, "producto")
     listado.then(function (value) {
         let todo = document.getElementById(idDiv);
+        todo.innerHTML = ''
         let table = document.createElement('table');
         var tblBody = document.createElement("tbody");
 
@@ -44,62 +45,79 @@ function searchProduct(idProducto, idDiv) {
             }
             }
         )
+        var row = document.createElement("tr");
+        var collapse = document.createElement('button');
+        collapse.textContent = "collapse";
+        collapse.addEventListener('click', () => {
+            todo.innerHTML=""
+        });
+        appendCellComponent(row, collapse)
+
+        tblBody.appendChild(row);
+
         table.appendChild(tblBody);
         todo.appendChild(table);
 
     });
 }
-function appendCell(row, element){
-    var cell = document.createElement("td");
-    var cellText = document.createTextNode(element);
-    cell.appendChild(cellText);
-    row.appendChild(cell);
 
+function clearProducts(){
+    let todo = document.getElementById("todo");
+    todo.innerHTML = ''
 }
-function tranlaste(banderaId, sucursalTipo){
-    let nombre = banderaId
-    if(banderaId ===1){
-        nombre = "Coto"
-    }
-    else if(banderaId ===2){
-        nombre = "Carrefour (market)"
-    }
-    else if(banderaId ===3){
-        nombre = "Carrefour (express)"
-    }
-    return nombre + "("+sucursalTipo+")"
-}
-
 function searchProducts() {
     var search = document.getElementById('comida').value
+    doSearchProducts(search, "todo")
+}
+function doSearchProducts(search, elementToFill) {
+
     params = structuredClone(baseParams);
     params.string = search
     params.offset = 0
     params.sort = "-cant_sucursales_disponible"
-
     var listado = doRequest(params, "productos")
-
-
     listado.then(function (value) {
-        let todo = document.getElementById("todo");
+        // let todo = document.getElementById(idDiv);
+        let todo = document.getElementById(elementToFill);
+        let table = document.createElement('table');
+        var tblBody = document.createElement("tbody");
+
         value.productos.forEach((element) => {
                 var newDiv = document.createElement('div');
                 newDiv.id = 'block' + element.id;
-                var span = document.createElement('span');
-                span.textContent = element.marca + "-" + element.nombre + "-" + element.presentacion + "-" + element.id + "-$" + element.precioMin + "-$" + element.precioMax;
-                // <input id="clickMe" type="button" value="clickme" onClick="searchProducts();"/>
                 var expand = document.createElement('button');
                 expand.textContent = "expand";
                 expand.addEventListener('click', () => {
                     searchProduct(element.id, newDiv.id)
                 });
-                span.appendChild(expand)
-                newDiv.appendChild(span)
-                todo.appendChild(newDiv);
+                var row = document.createElement("tr");
+                appendCell(row, element.marca)
+                appendCell(row, element.nombre)
+                appendCell(row, element.presentacion)
+                appendCell(row, element.id)
+                appendCell(row, "$"+element.precioMin)
+                appendCell(row, "$"+element.precioMax)
+                appendCellComponent(row, expand)
+                appendCellComponent(row, newDiv)
+                tblBody.appendChild(row);
+
             }
         )
+    table.appendChild(tblBody);
+    todo.appendChild(table);
+
     });
 }
+
+function appendCell(row, element){
+    appendCellComponent(row, document.createTextNode(element));
+}
+function appendCellComponent(row, element){
+    var cell = document.createElement("td");
+    cell.appendChild(element);
+    row.appendChild(cell);
+}
+
 
 function formatParams(params) {
     return "?" + Object
@@ -109,3 +127,14 @@ function formatParams(params) {
         })
         .join("&")
 }
+
+
+var param = /[&?]search=([^&]+)/.exec(location.search);
+param = param ? param[1].replace(/"/g, '&quot;') : '';
+if(param) {
+    var params = decodeURIComponent(param).split(',');
+    params.forEach((p)=>doSearchProducts(p, "preloaded"))
+
+}
+else
+    doSearchProducts("coca cola light","preloaded")
