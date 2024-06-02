@@ -29,6 +29,12 @@ function searchProduct(idProducto, idDiv) {
         let table = document.createElement('table');
         var tblBody = document.createElement("tbody");
 
+        var row = document.createElement("tr");
+        appendCell(row, "bandera")
+        appendCell(row, "direccion")
+        appendCell(row, "precios")
+        tblBody.appendChild(row);
+
         value.sucursales.forEach((element) => {
             if (element.preciosProducto) {
                 var precios = "$"+ element.preciosProducto.precioLista;
@@ -82,6 +88,17 @@ function doSearchProducts(search, elementToFill) {
         let table = document.createElement('table');
         var tblBody = document.createElement("tbody");
 
+        var row = document.createElement("tr");
+        appendCell(row, "marca")
+        appendCell(row, "nmbre")
+        appendCell(row, "presentacion")
+        appendCell(row, "id")
+        appendCell(row, "precioMin")
+        appendCell(row, "precioMax")
+        appendCell(row, "")
+        appendCell(row, "")
+        tblBody.appendChild(row);
+
         value.productos.forEach((element) => {
                 var newDiv = document.createElement('div');
                 newDiv.id = 'block' + element.id;
@@ -104,6 +121,8 @@ function doSearchProducts(search, elementToFill) {
             }
         )
     table.appendChild(tblBody);
+    todo.appendChild(document.createTextNode(search))
+    todo.appendChild(document.createElement('hr'))
     todo.appendChild(table);
 
     });
